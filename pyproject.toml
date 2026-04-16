@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ranking-inference"
+version = "0.1.0"
+description = "Distributional grounding primitives for LLM outputs via the Mandelbrot Ranking Distribution"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Wallace AI" },
+]
+keywords = ["llm", "evaluation", "hallucination", "mandelbrot", "zipf", "ranking"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+ner = ["spacy>=3.7"]
+tokenizers = ["transformers>=4.40", "tokenizers>=0.19"]
+dev = ["pytest>=7.0", "ruff>=0.5"]
+
+[project.urls]
+Homepage = "https://github.com/Wallace-AI/Ranking-Inference"
+Repository = "https://github.com/Wallace-AI/Ranking-Inference"
+Paper = "https://arxiv.org/abs/XXXX.XXXXX"
+
+[tool.setuptools]
+packages = ["ranking_inference"]
+
+[tool.setuptools.package-data]
+ranking_inference = ["*.py"]
