@@ -4,9 +4,13 @@ Distributional grounding primitives for large language model outputs, built on
 the **Mandelbrot Ranking Distribution** f(r) = C / (r + q)^s.
 
 This repository accompanies the paper
-*Universal Distributional Convergence: A Mandelbrot-Grounded Validation Primitive for LLM Outputs*
-and provides the core utilities needed to reproduce its results or apply the
-primitive to new settings.
+
+> **The Surprising Universality of LLM Outputs: A Real-Time Verification Primitive**
+> Alex Bogdan and Adrian de Valois-Franklin (Evolutionairy AI), 2026.
+
+It provides the core scoring utilities, the precomputed Wikipedia rank table,
+and the experiment scripts and configurations needed to reproduce the paper's
+results.
 
 ## What is it?
 
@@ -68,10 +72,26 @@ ranking_inference/
   token_scoring.py     per-token log(P_LLM / G_RI), three aggregation modes
   entity_extraction.py spaCy-NER alignment to subword tokens
   aggregation.py       sentence/document aggregation helpers
+
 rank_tables/
   wikipedia_full_llama-3.1-8b.json   the reference corpus rank table
+
 examples/
-  minimal_scoring.py
+  minimal_scoring.py   minimal end-to-end scoring example
+
+tests/
+  test_smoke.py        smoke tests for the core primitives
+
+Experiments/
+  exp01_mandelbrot_fit/   six-model rank-frequency convergence (Section 3)
+  exp02_beta_calibration/ domain-level β estimation (Section 5.2.3)
+  exp03_gap_signal/       early gap-signal validation
+  exp04_halueval/         HaluEval scoring (Section 5.2)
+  exp05_truthfulqa/       TruthfulQA scoring (Section 5.2)
+  exp06_frank/            FRANK scoring + entity-level (Sections 5.2, 5.2.2)
+  exp07_latency/          CPU latency benchmarking (Section 5.4)
+  exp08_conviction/       conviction analysis + ROUGE comparison
+  shared/                 shared utilities (corpus tools, tokenizers)
 ```
 
 ## Three aggregation modes
@@ -90,17 +110,40 @@ can choose the appropriate privacy / black-box trade-off:
 
 ## Reproducing paper results
 
-The `Experiments/` directory is kept in the authors' internal repo and is
-available on request. Everything needed to run the primitive and reproduce
-the rank-only numbers is in this public release.
+The `Experiments/` directory contains the source code, configurations, and
+orchestration scripts for every experiment reported in the paper. Each
+experiment has its own `src/`, `config/`, and `run.py` (or `run_experiment_*.py`)
+entry point.
+
+Two categories of inputs are **not** redistributed in this repository:
+
+- **Third-party benchmark datasets** (FRANK, TruthfulQA, HaluEval). Each
+  experiment's `run.py` will download or expect these under their own license.
+- **Proprietary model outputs** from closed APIs (GPT-5.1, Claude 4.6 Sonnet,
+  Gemini 2.5 Pro, Mistral Large). The prompts used to generate them are in
+  `Experiments/exp01_mandelbrot_fit/data/prompts/`, and the fitting and
+  scoring scripts will regenerate outputs from those prompts using API keys
+  you supply.
+
+Set up API keys by creating a directory `Experiments/API_KEYS/` containing
+files named like `OpenAI_RI.key.txt`, `Claude_Key.txt`, etc. (one secret per
+file). The loader at `Experiments/shared/utils/api_keys.py` will pick them up
+as environment variables.
+
+## Tests
+
+```bash
+pip install ranking-inference[dev]
+pytest tests/
+```
 
 ## Citation
 
 ```bibtex
-@article{ranking_inference_2026,
-  title  = {Universal Distributional Convergence: A Mandelbrot-Grounded
-            Validation Primitive for LLM Outputs},
-  author = {Wallace AI},
+@article{bogdan2026universality,
+  title  = {The Surprising Universality of LLM Outputs:
+            A Real-Time Verification Primitive},
+  author = {Bogdan, Alex and de Valois-Franklin, Adrian},
   year   = {2026},
   note   = {arXiv preprint, forthcoming},
 }

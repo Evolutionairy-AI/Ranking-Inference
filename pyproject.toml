@@ -10,7 +10,8 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Wallace AI" },
+    { name = "Alex Bogdan" },
+    { name = "Adrian de Valois-Franklin" },
 ]
 keywords = ["llm", "evaluation", "hallucination", "mandelbrot", "zipf", "ranking"]
 classifiers = [

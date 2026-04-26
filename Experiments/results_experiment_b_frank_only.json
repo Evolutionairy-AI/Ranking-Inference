@@ -1,0 +1,285 @@
+{
+  "frank": {
+    "n_spans": 3178,
+    "overall": {
+      "output_level": {
+        "auc": 0.46563071795068645,
+        "n": 3178
+      },
+      "entity_level": {
+        "auc": 0.5575630709003915,
+        "n": 2730
+      },
+      "rank_only_log_rank": {
+        "auc": 0.5590811222270553,
+        "n": 2730
+      },
+      "rank_only_neg_log_g": {
+        "auc": 0.5583623314484558,
+        "n": 2730
+      },
+      "rank_only_rank_dev": {
+        "auc": 0.46003588516746413,
+        "n": 2730
+      }
+    },
+    "by_error_type": {
+      "CircE": {
+        "output_level": {
+          "auc": 0.38180089420508656,
+          "n": 1902
+        },
+        "entity_level": {
+          "auc": 0.48987500000000006,
+          "n": 1670
+        },
+        "rank_only_log_rank": {
+          "auc": 0.4910767543859649,
+          "n": 1670
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.49089254385964914,
+          "n": 1670
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.5140548245614035,
+          "n": 1670
+        },
+        "n_errors": 158,
+        "n_controls": 1744
+      },
+      "CorefE": {
+        "output_level": {
+          "auc": 0.40682123887700905,
+          "n": 1877
+        },
+        "entity_level": {
+          "auc": 0.4606976425438597,
+          "n": 1616
+        },
+        "rank_only_log_rank": {
+          "auc": 0.4684518914473684,
+          "n": 1616
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.46637541118421055,
+          "n": 1616
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.530126096491228,
+          "n": 1616
+        },
+        "n_errors": 133,
+        "n_controls": 1744
+      },
+      "EntE": {
+        "output_level": {
+          "auc": 0.5309125703175143,
+          "n": 2230
+        },
+        "entity_level": {
+          "auc": 0.5937315017372281,
+          "n": 1929
+        },
+        "rank_only_log_rank": {
+          "auc": 0.59163395959336,
+          "n": 1929
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5905304980054047,
+          "n": 1929
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.43526331874919577,
+          "n": 1929
+        },
+        "n_errors": 486,
+        "n_controls": 1744
+      },
+      "LinkE": {
+        "output_level": {
+          "auc": 0.5125,
+          "n": 1784
+        },
+        "entity_level": {
+          "auc": 0.5719517543859648,
+          "n": 1550
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5791228070175438,
+          "n": 1550
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5794736842105264,
+          "n": 1550
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.4455701754385965,
+          "n": 1550
+        },
+        "n_errors": 40,
+        "n_controls": 1744
+      },
+      "OutE": {
+        "output_level": {
+          "auc": 0.43023939220183494,
+          "n": 2224
+        },
+        "entity_level": {
+          "auc": 0.5580038549764241,
+          "n": 1933
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5588608703963298,
+          "n": 1933
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5584785586848477,
+          "n": 1933
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.45948690582388174,
+          "n": 1933
+        },
+        "n_errors": 480,
+        "n_controls": 1744
+      },
+      "RelE": {
+        "output_level": {
+          "auc": 0.498133328868948,
+          "n": 1881
+        },
+        "entity_level": {
+          "auc": 0.5936853853383458,
+          "n": 1632
+        },
+        "rank_only_log_rank": {
+          "auc": 0.6044084821428571,
+          "n": 1632
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.6040149201127819,
+          "n": 1632
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.4239749765037594,
+          "n": 1632
+        },
+        "n_errors": 137,
+        "n_controls": 1744
+      }
+    },
+    "by_tier": {
+      "tier1": {
+        "output_level": {
+          "auc": 0.48088863088115186,
+          "n": 2710
+        },
+        "entity_level": {
+          "auc": 0.5757807497758995,
+          "n": 2342
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5751676751184531,
+          "n": 2342
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5744265430913049,
+          "n": 2342
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.44743405045460366,
+          "n": 2342
+        }
+      },
+      "tier1.5": {
+        "output_level": {
+          "auc": 0.435826465557456,
+          "n": 2039
+        },
+        "entity_level": {
+          "auc": 0.5342519586179189,
+          "n": 1782
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5395239051828042,
+          "n": 1782
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5392502008838891,
+          "n": 1782
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.4755474085978305,
+          "n": 1782
+        }
+      },
+      "tier2": {
+        "output_level": {
+          "auc": 0.4312556345123827,
+          "n": 1917
+        },
+        "entity_level": {
+          "auc": 0.48718671679198,
+          "n": 1646
+        },
+        "rank_only_log_rank": {
+          "auc": 0.4948021094402673,
+          "n": 1646
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.4933035714285715,
+          "n": 1646
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.5099937343358395,
+          "n": 1646
+        }
+      }
+    }
+  },
+  "halueval": {
+    "n_examples": 5,
+    "overall": {
+      "output_level": {
+        "auc": 0.16666666666666669,
+        "n": 5
+      },
+      "entity_level": {
+        "auc": 0.33333333333333337,
+        "n": 4
+      },
+      "rank_only_log_rank": {
+        "auc": 0.33333333333333337,
+        "n": 4
+      },
+      "rank_only_neg_log_g": {
+        "auc": 0.33333333333333337,
+        "n": 4
+      }
+    },
+    "by_task": {
+      "qa": {
+        "output_level": {
+          "auc": 0.16666666666666669,
+          "n": 5
+        },
+        "entity_level": {
+          "auc": 0.33333333333333337,
+          "n": 4
+        },
+        "rank_only_log_rank": {
+          "auc": 0.33333333333333337,
+          "n": 4
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.33333333333333337,
+          "n": 4
+        }
+      }
+    }
+  },
+  "truthfulqa": {
+    "n_candidates": 0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "gpt-5.1": {
+    "total_tokens": 236087,
+    "vocab_size": 22109,
+    "domain_counts": {
+      "news": 45268,
+      "biomedical": 46636,
+      "legal": 50423,
+      "code": 56459,
+      "social_media": 37301
+    }
+  },
+  "claude-sonnet-4-6": {
+    "total_tokens": 108549,
+    "vocab_size": 15467,
+    "domain_counts": {
+      "news": 21159,
+      "biomedical": 23300,
+      "legal": 20976,
+      "code": 23287,
+      "social_media": 19827
+    }
+  },
+  "llama-3.1-8b": {
+    "total_tokens": 76878,
+    "vocab_size": 11301,
+    "domain_counts": {
+      "news": 13025,
+      "biomedical": 14981,
+      "legal": 14327,
+      "code": 20694,
+      "social_media": 13851
+    }
+  },
+  "gemini-2.5-pro": {
+    "total_tokens": 156419,
+    "vocab_size": 17441,
+    "domain_counts": {
+      "news": 17980,
+      "biomedical": 29617,
+      "legal": 30780,
+      "code": 54827,
+      "social_media": 23215
+    }
+  },
+  "mistral-large": {
+    "total_tokens": 121004,
+    "vocab_size": 15703,
+    "domain_counts": {
+      "news": 21636,
+      "biomedical": 30631,
+      "legal": 28836,
+      "code": 28559,
+      "social_media": 11342
+    }
+  },
+  "qwen-2.5-7b": {
+    "total_tokens": 78171,
+    "vocab_size": 11333,
+    "domain_counts": {
+      "news": 13633,
+      "biomedical": 15310,
+      "legal": 13675,
+      "code": 23147,
+      "social_media": 12406
+    }
+  }
+}

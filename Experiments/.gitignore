@@ -1,0 +1,50 @@
+# Virtual environment
+.venv/
+
+# API keys (never commit)
+API_KEYS/
+
+# Large data files (regeneratable)
+exp01_mandelbrot_fit/data/outputs/
+exp02_beta_calibration/data/domain_corpora/
+exp03_gap_signal/data/outputs/
+shared/rank_tables/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Large JSON results (regeneratable)
+**/gap_results_full_*.json
+
+# Tier 2 experiment data (regeneratable)
+exp04_halueval/data/
+exp04_halueval/results/
+exp05_truthfulqa/data/
+exp05_truthfulqa/results/
+exp06_frank/data/
+exp06_frank/results/
+exp07_baselines/data/
+exp07_baselines/results/
+exp08_ablations/data/
+exp08_ablations/results/
+
+# Keep tier annotations (one-time manual/LLM-assisted annotation)
+!exp05_truthfulqa/data/tier_annotations.json
+
+# SpaCy models (large, downloadable)
+en_core_web_*/
+
+# Tooling directories
+.claude/
+.agent/
+.agents/
+
+# Scoring logs (regeneratable)
+scoring_all_logspace.log
+
+# Binary document copies (generated from markdown)
+*.docx

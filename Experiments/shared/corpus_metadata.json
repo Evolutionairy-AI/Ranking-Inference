@@ -1,0 +1,29 @@
+{
+  "gpt-5.1": {
+    "tokenizer_name": "gpt-5.1",
+    "subset": "20231101.en",
+    "max_articles": null,
+    "total_tokens": 4490978231,
+    "vocab_size": 181095,
+    "output_path": "shared\\rank_tables\\wikipedia_full_gpt-5.1.json",
+    "elapsed_seconds": 3369.44
+  },
+  "claude-sonnet-4": {
+    "tokenizer_name": "claude-sonnet-4",
+    "subset": "20231101.en",
+    "max_articles": null,
+    "total_tokens": 4575887871,
+    "vocab_size": 90181,
+    "output_path": "shared\\rank_tables\\wikipedia_full_claude-sonnet-4.json",
+    "elapsed_seconds": 2331.42
+  },
+  "llama-3.1-8b": {
+    "tokenizer_name": "llama-3.1-8b",
+    "subset": "20231101.en",
+    "max_articles": null,
+    "total_tokens": 4490978231,
+    "vocab_size": 181095,
+    "output_path": "shared\\rank_tables\\wikipedia_full_llama-3.1-8b.json",
+    "elapsed_seconds": 3321.34
+  }
+}

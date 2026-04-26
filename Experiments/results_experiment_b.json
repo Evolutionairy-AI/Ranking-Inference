@@ -1,0 +1,1064 @@
+{
+  "frank": {
+    "n_spans": 3178,
+    "overall": {
+      "output_level": {
+        "auc": 0.46563071795068645,
+        "n": 3178
+      },
+      "entity_level": {
+        "auc": 0.5575630709003915,
+        "n": 2730
+      },
+      "rank_only_log_rank": {
+        "auc": 0.5590811222270553,
+        "n": 2730
+      },
+      "rank_only_neg_log_g": {
+        "auc": 0.5583623314484558,
+        "n": 2730
+      },
+      "rank_only_rank_dev": {
+        "auc": 0.46003588516746413,
+        "n": 2730
+      }
+    },
+    "by_error_type": {
+      "CircE": {
+        "output_level": {
+          "auc": 0.38180089420508656,
+          "n": 1902
+        },
+        "entity_level": {
+          "auc": 0.48987500000000006,
+          "n": 1670
+        },
+        "rank_only_log_rank": {
+          "auc": 0.4910767543859649,
+          "n": 1670
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.49089254385964914,
+          "n": 1670
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.5140548245614035,
+          "n": 1670
+        },
+        "n_errors": 158,
+        "n_controls": 1744
+      },
+      "CorefE": {
+        "output_level": {
+          "auc": 0.40682123887700905,
+          "n": 1877
+        },
+        "entity_level": {
+          "auc": 0.4606976425438597,
+          "n": 1616
+        },
+        "rank_only_log_rank": {
+          "auc": 0.4684518914473684,
+          "n": 1616
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.46637541118421055,
+          "n": 1616
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.530126096491228,
+          "n": 1616
+        },
+        "n_errors": 133,
+        "n_controls": 1744
+      },
+      "EntE": {
+        "output_level": {
+          "auc": 0.5309125703175143,
+          "n": 2230
+        },
+        "entity_level": {
+          "auc": 0.5937315017372281,
+          "n": 1929
+        },
+        "rank_only_log_rank": {
+          "auc": 0.59163395959336,
+          "n": 1929
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5905304980054047,
+          "n": 1929
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.43526331874919577,
+          "n": 1929
+        },
+        "n_errors": 486,
+        "n_controls": 1744
+      },
+      "LinkE": {
+        "output_level": {
+          "auc": 0.5125,
+          "n": 1784
+        },
+        "entity_level": {
+          "auc": 0.5719517543859648,
+          "n": 1550
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5791228070175438,
+          "n": 1550
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5794736842105264,
+          "n": 1550
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.4455701754385965,
+          "n": 1550
+        },
+        "n_errors": 40,
+        "n_controls": 1744
+      },
+      "OutE": {
+        "output_level": {
+          "auc": 0.43023939220183494,
+          "n": 2224
+        },
+        "entity_level": {
+          "auc": 0.5580038549764241,
+          "n": 1933
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5588608703963298,
+          "n": 1933
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5584785586848477,
+          "n": 1933
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.45948690582388174,
+          "n": 1933
+        },
+        "n_errors": 480,
+        "n_controls": 1744
+      },
+      "RelE": {
+        "output_level": {
+          "auc": 0.498133328868948,
+          "n": 1881
+        },
+        "entity_level": {
+          "auc": 0.5936853853383458,
+          "n": 1632
+        },
+        "rank_only_log_rank": {
+          "auc": 0.6044084821428571,
+          "n": 1632
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.6040149201127819,
+          "n": 1632
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.4239749765037594,
+          "n": 1632
+        },
+        "n_errors": 137,
+        "n_controls": 1744
+      }
+    },
+    "by_tier": {
+      "tier1": {
+        "output_level": {
+          "auc": 0.48088863088115186,
+          "n": 2710
+        },
+        "entity_level": {
+          "auc": 0.5757807497758995,
+          "n": 2342
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5751676751184531,
+          "n": 2342
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5744265430913049,
+          "n": 2342
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.44743405045460366,
+          "n": 2342
+        }
+      },
+      "tier1.5": {
+        "output_level": {
+          "auc": 0.435826465557456,
+          "n": 2039
+        },
+        "entity_level": {
+          "auc": 0.5342519586179189,
+          "n": 1782
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5395239051828042,
+          "n": 1782
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5392502008838891,
+          "n": 1782
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.4755474085978305,
+          "n": 1782
+        }
+      },
+      "tier2": {
+        "output_level": {
+          "auc": 0.4312556345123827,
+          "n": 1917
+        },
+        "entity_level": {
+          "auc": 0.48718671679198,
+          "n": 1646
+        },
+        "rank_only_log_rank": {
+          "auc": 0.4948021094402673,
+          "n": 1646
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.4933035714285715,
+          "n": 1646
+        },
+        "rank_only_rank_dev": {
+          "auc": 0.5099937343358395,
+          "n": 1646
+        }
+      }
+    }
+  },
+  "halueval": {
+    "n_examples": 6200,
+    "overall": {
+      "output_level": {
+        "auc": 0.3139032708622279,
+        "n": 6200
+      },
+      "entity_level": {
+        "auc": 0.45968820158609697,
+        "n": 5527
+      },
+      "rank_only_log_rank": {
+        "auc": 0.493885144158176,
+        "n": 5527
+      },
+      "rank_only_neg_log_g": {
+        "auc": 0.49503260516023595,
+        "n": 5527
+      }
+    },
+    "by_task": {
+      "dialogue": {
+        "output_level": {
+          "auc": 0.47831265846478466,
+          "n": 2000
+        },
+        "entity_level": {
+          "auc": 0.4935121340509847,
+          "n": 1672
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5070679334875322,
+          "n": 1672
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5087921040856868,
+          "n": 1672
+        }
+      },
+      "qa": {
+        "output_level": {
+          "auc": 0.15785682445402133,
+          "n": 2200
+        },
+        "entity_level": {
+          "auc": 0.3846325501858037,
+          "n": 1863
+        },
+        "rank_only_log_rank": {
+          "auc": 0.45677713885717774,
+          "n": 1863
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.457024368243767,
+          "n": 1863
+        }
+      },
+      "summarization": {
+        "output_level": {
+          "auc": 0.3208553419836463,
+          "n": 2000
+        },
+        "entity_level": {
+          "auc": 0.5139068971954129,
+          "n": 1992
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5144921321218298,
+          "n": 1992
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5165101835922326,
+          "n": 1992
+        }
+      }
+    }
+  },
+  "truthfulqa": {
+    "n_questions": 817,
+    "n_candidates": 4114,
+    "overall": {
+      "output_level": {
+        "auc": 0.5128264669969992,
+        "n": 4114
+      },
+      "entity_level": {
+        "auc": 0.5093916701976251,
+        "n": 2326
+      },
+      "rank_only_log_rank": {
+        "auc": 0.520677156329107,
+        "n": 2326
+      },
+      "rank_only_neg_log_g": {
+        "auc": 0.5205725856393207,
+        "n": 2326
+      }
+    },
+    "by_tier": {
+      "tier2": {
+        "output_level": {
+          "auc": 0.5134553018575851,
+          "n": 4030
+        },
+        "entity_level": {
+          "auc": 0.5099014773476639,
+          "n": 2288
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5212160453988782,
+          "n": 2288
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5211907363116504,
+          "n": 2288
+        }
+      },
+      "tier1": {
+        "output_level": {
+          "auc": 0.4872695346795435,
+          "n": 84
+        },
+        "entity_level": {
+          "auc": 0.5253456221198156,
+          "n": 38
+        },
+        "rank_only_log_rank": {
+          "auc": 0.511520737327189,
+          "n": 38
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.511520737327189,
+          "n": 38
+        }
+      }
+    },
+    "by_category": {
+      "Distraction": {
+        "output_level": {
+          "auc": 0.5093167701863354,
+          "n": 83
+        },
+        "entity_level": {
+          "auc": 0.5180375180375181,
+          "n": 74
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5396825396825397,
+          "n": 74
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5483405483405484,
+          "n": 74
+        }
+      },
+      "Economics": {
+        "output_level": {
+          "auc": 0.567167476800707,
+          "n": 177
+        },
+        "entity_level": {
+          "auc": 0.5925619834710744,
+          "n": 151
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5754820936639118,
+          "n": 151
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5757575757575757,
+          "n": 151
+        }
+      },
+      "Psychology": {
+        "output_level": {
+          "auc": 0.5046052631578948,
+          "n": 99
+        },
+        "entity_level": {
+          "auc": 0.4125,
+          "n": 33
+        },
+        "rank_only_log_rank": {
+          "auc": 0.405,
+          "n": 33
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.405,
+          "n": 33
+        }
+      },
+      "Weather": {
+        "output_level": {
+          "auc": 0.6490641711229946,
+          "n": 105
+        },
+        "entity_level": {
+          "auc": 0.5836139169472503,
+          "n": 92
+        },
+        "rank_only_log_rank": {
+          "auc": 0.6341189674523007,
+          "n": 92
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.6341189674523007,
+          "n": 92
+        }
+      },
+      "Conspiracies": {
+        "output_level": {
+          "auc": 0.5175193798449612,
+          "n": 154
+        },
+        "entity_level": {
+          "auc": 0.48806609547123625,
+          "n": 105
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5100979192166463,
+          "n": 105
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5039779681762546,
+          "n": 105
+        }
+      },
+      "Education": {
+        "output_level": {
+          "auc": 0.484375,
+          "n": 42
+        },
+        "entity_level": {
+          "auc": 0.40384615384615385,
+          "n": 15
+        },
+        "rank_only_log_rank": {
+          "auc": 0.3846153846153846,
+          "n": 15
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.3846153846153846,
+          "n": 15
+        }
+      },
+      "Superstitions": {
+        "output_level": {
+          "auc": 0.34750733137829914,
+          "n": 115
+        },
+        "entity_level": {
+          "auc": 0.34259259259259256,
+          "n": 42
+        },
+        "rank_only_log_rank": {
+          "auc": 0.35648148148148145,
+          "n": 42
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.35648148148148145,
+          "n": 42
+        }
+      },
+      "Science": {
+        "output_level": {
+          "auc": 0.5087719298245614,
+          "n": 66
+        },
+        "entity_level": {
+          "auc": 0.375,
+          "n": 6
+        },
+        "rank_only_log_rank": {
+          "auc": 0.375,
+          "n": 6
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.375,
+          "n": 6
+        }
+      },
+      "Subjective": {
+        "output_level": {
+          "auc": 0.6870748299319728,
+          "n": 58
+        },
+        "entity_level": {
+          "auc": NaN,
+          "n": 30
+        },
+        "rank_only_log_rank": {
+          "auc": NaN,
+          "n": 30
+        },
+        "rank_only_neg_log_g": {
+          "auc": NaN,
+          "n": 30
+        }
+      },
+      "Mandela Effect": {
+        "output_level": {
+          "auc": 0.712121212121212,
+          "n": 17
+        },
+        "entity_level": {
+          "auc": 0.5454545454545454,
+          "n": 16
+        },
+        "rank_only_log_rank": {
+          "auc": 0.6272727272727272,
+          "n": 16
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.6454545454545455,
+          "n": 16
+        }
+      },
+      "Health": {
+        "output_level": {
+          "auc": 0.4728102947281029,
+          "n": 274
+        },
+        "entity_level": {
+          "auc": 0.4378698224852071,
+          "n": 143
+        },
+        "rank_only_log_rank": {
+          "auc": 0.45414201183431957,
+          "n": 143
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.455456936226167,
+          "n": 143
+        }
+      },
+      "Misquotations": {
+        "output_level": {
+          "auc": 0.6471774193548386,
+          "n": 47
+        },
+        "entity_level": {
+          "auc": 0.5851648351648351,
+          "n": 41
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5604395604395604,
+          "n": 41
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5604395604395604,
+          "n": 41
+        }
+      },
+      "Paranormal": {
+        "output_level": {
+          "auc": 0.4086538461538461,
+          "n": 154
+        },
+        "entity_level": {
+          "auc": 0.39999999999999997,
+          "n": 29
+        },
+        "rank_only_log_rank": {
+          "auc": 0.44999999999999996,
+          "n": 29
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.44999999999999996,
+          "n": 29
+        }
+      },
+      "Sociology": {
+        "output_level": {
+          "auc": 0.5295278365045807,
+          "n": 313
+        },
+        "entity_level": {
+          "auc": 0.5405327868852459,
+          "n": 294
+        },
+        "rank_only_log_rank": {
+          "auc": 0.572172131147541,
+          "n": 294
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5703688524590164,
+          "n": 294
+        }
+      },
+      "Politics": {
+        "output_level": {
+          "auc": 0.5829787234042553,
+          "n": 57
+        },
+        "entity_level": {
+          "auc": 0.4170454545454545,
+          "n": 54
+        },
+        "rank_only_log_rank": {
+          "auc": 0.43068181818181817,
+          "n": 54
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.43522727272727274,
+          "n": 54
+        }
+      },
+      "Indexical Error: Identity": {
+        "output_level": {
+          "auc": 0.3128654970760234,
+          "n": 47
+        },
+        "entity_level": {
+          "auc": 0.0,
+          "n": 6
+        },
+        "rank_only_log_rank": {
+          "auc": 0.0,
+          "n": 6
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.0,
+          "n": 6
+        }
+      },
+      "Finance": {
+        "output_level": {
+          "auc": 0.3869731800766284,
+          "n": 67
+        },
+        "entity_level": {
+          "auc": 0.3977272727272727,
+          "n": 24
+        },
+        "rank_only_log_rank": {
+          "auc": 0.23863636363636365,
+          "n": 24
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.32954545454545453,
+          "n": 24
+        }
+      },
+      "Law": {
+        "output_level": {
+          "auc": 0.528578629032258,
+          "n": 374
+        },
+        "entity_level": {
+          "auc": 0.5974124809741248,
+          "n": 261
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5896390519678191,
+          "n": 261
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5895303326810176,
+          "n": 261
+        }
+      },
+      "Misconceptions": {
+        "output_level": {
+          "auc": 0.5194408945686901,
+          "n": 413
+        },
+        "entity_level": {
+          "auc": 0.5068576038725292,
+          "n": 171
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5130092779346511,
+          "n": 171
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5111940298507462,
+          "n": 171
+        }
+      },
+      "Fiction": {
+        "output_level": {
+          "auc": 0.5553623188405797,
+          "n": 145
+        },
+        "entity_level": {
+          "auc": 0.7906976744186046,
+          "n": 46
+        },
+        "rank_only_log_rank": {
+          "auc": 0.806201550387597,
+          "n": 46
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.806201550387597,
+          "n": 46
+        }
+      },
+      "Myths and Fairytales": {
+        "output_level": {
+          "auc": 0.4336219336219336,
+          "n": 87
+        },
+        "entity_level": {
+          "auc": 0.5333333333333333,
+          "n": 23
+        },
+        "rank_only_log_rank": {
+          "auc": 0.3583333333333333,
+          "n": 23
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.3583333333333333,
+          "n": 23
+        }
+      },
+      "Misinformation": {
+        "output_level": {
+          "auc": 0.46695402298850575,
+          "n": 70
+        },
+        "entity_level": {
+          "auc": 0.52,
+          "n": 26
+        },
+        "rank_only_log_rank": {
+          "auc": 0.64,
+          "n": 26
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.64,
+          "n": 26
+        }
+      },
+      "History": {
+        "output_level": {
+          "auc": 0.49375,
+          "n": 84
+        },
+        "entity_level": {
+          "auc": 0.41093474426807763,
+          "n": 75
+        },
+        "rank_only_log_rank": {
+          "auc": 0.44532627865961205,
+          "n": 75
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.4409171075837743,
+          "n": 75
+        }
+      },
+      "Indexical Error: Location": {
+        "output_level": {
+          "auc": 0.3706293706293706,
+          "n": 50
+        },
+        "entity_level": {
+          "auc": NaN,
+          "n": 25
+        },
+        "rank_only_log_rank": {
+          "auc": NaN,
+          "n": 25
+        },
+        "rank_only_neg_log_g": {
+          "auc": NaN,
+          "n": 25
+        }
+      },
+      "Language": {
+        "output_level": {
+          "auc": 0.7107843137254902,
+          "n": 89
+        },
+        "entity_level": {
+          "auc": 0.5155502392344498,
+          "n": 49
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5227272727272727,
+          "n": 49
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.527511961722488,
+          "n": 49
+        }
+      },
+      "Stereotypes": {
+        "output_level": {
+          "auc": 0.6323784722222223,
+          "n": 120
+        },
+        "entity_level": {
+          "auc": 0.5341386554621849,
+          "n": 82
+        },
+        "rank_only_log_rank": {
+          "auc": 0.5877100840336135,
+          "n": 82
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.5877100840336135,
+          "n": 82
+        }
+      },
+      "Confusion: People": {
+        "output_level": {
+          "auc": 0.4258639910813824,
+          "n": 101
+        },
+        "entity_level": {
+          "auc": 0.5946327683615819,
+          "n": 71
+        },
+        "rank_only_log_rank": {
+          "auc": 0.675141242937853,
+          "n": 71
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.675141242937853,
+          "n": 71
+        }
+      },
+      "Indexical Error: Time": {
+        "output_level": {
+          "auc": 0.7246376811594203,
+          "n": 85
+        },
+        "entity_level": {
+          "auc": 0.8446969696969697,
+          "n": 70
+        },
+        "rank_only_log_rank": {
+          "auc": 0.8484848484848485,
+          "n": 70
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.8484848484848485,
+          "n": 70
+        }
+      },
+      "Proverbs": {
+        "output_level": {
+          "auc": 0.5011111111111111,
+          "n": 68
+        },
+        "entity_level": {
+          "auc": 0.36363636363636365,
+          "n": 12
+        },
+        "rank_only_log_rank": {
+          "auc": 0.3181818181818182,
+          "n": 12
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.3181818181818182,
+          "n": 12
+        }
+      },
+      "Logical Falsehood": {
+        "output_level": {
+          "auc": 0.27586206896551724,
+          "n": 43
+        },
+        "entity_level": {
+          "auc": 0.25,
+          "n": 12
+        },
+        "rank_only_log_rank": {
+          "auc": 0.484375,
+          "n": 12
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.484375,
+          "n": 12
+        }
+      },
+      "Confusion: Places": {
+        "output_level": {
+          "auc": 0.416025641025641,
+          "n": 119
+        },
+        "entity_level": {
+          "auc": 0.4148936170212766,
+          "n": 105
+        },
+        "rank_only_log_rank": {
+          "auc": 0.4545454545454546,
+          "n": 105
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.4545454545454546,
+          "n": 105
+        }
+      },
+      "Religion": {
+        "output_level": {
+          "auc": 0.4217391304347826,
+          "n": 61
+        },
+        "entity_level": {
+          "auc": 0.8333333333333333,
+          "n": 26
+        },
+        "rank_only_log_rank": {
+          "auc": 0.8913043478260869,
+          "n": 26
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.8913043478260869,
+          "n": 26
+        }
+      },
+      "Confusion: Other": {
+        "output_level": {
+          "auc": 0.3628048780487805,
+          "n": 49
+        },
+        "entity_level": {
+          "auc": 0.375,
+          "n": 35
+        },
+        "rank_only_log_rank": {
+          "auc": 0.39583333333333337,
+          "n": 35
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.39583333333333337,
+          "n": 35
+        }
+      },
+      "Advertising": {
+        "output_level": {
+          "auc": 0.5953846153846154,
+          "n": 63
+        },
+        "entity_level": {
+          "auc": 0.587962962962963,
+          "n": 39
+        },
+        "rank_only_log_rank": {
+          "auc": 0.6250000000000001,
+          "n": 39
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.6250000000000001,
+          "n": 39
+        }
+      },
+      "Indexical Error: Other": {
+        "output_level": {
+          "auc": 0.6048752834467119,
+          "n": 105
+        },
+        "entity_level": {
+          "auc": NaN,
+          "n": 19
+        },
+        "rank_only_log_rank": {
+          "auc": NaN,
+          "n": 19
+        },
+        "rank_only_neg_log_g": {
+          "auc": NaN,
+          "n": 19
+        }
+      },
+      "Nutrition": {
+        "output_level": {
+          "auc": 0.5360169491525424,
+          "n": 75
+        },
+        "entity_level": {
+          "auc": 0.6764705882352942,
+          "n": 18
+        },
+        "rank_only_log_rank": {
+          "auc": 0.7352941176470589,
+          "n": 18
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.7352941176470589,
+          "n": 18
+        }
+      },
+      "Misconceptions: Topical": {
+        "output_level": {
+          "auc": 0.75,
+          "n": 17
+        },
+        "entity_level": {
+          "auc": 0.0,
+          "n": 3
+        },
+        "rank_only_log_rank": {
+          "auc": 0.25,
+          "n": 3
+        },
+        "rank_only_neg_log_g": {
+          "auc": 0.25,
+          "n": 3
+        }
+      },
+      "Statistics": {
+        "output_level": {
+          "auc": 0.7250000000000001,
+          "n": 21
+        },
+        "entity_level": {
+          "auc": 1.0,
+          "n": 3
+        },
+        "rank_only_log_rank": {
+          "auc": 1.0,
+          "n": 3
+        },
+        "rank_only_neg_log_g": {
+          "auc": 1.0,
+          "n": 3
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+# Experiment 01: Mandelbrot Ranking Distribution Fit Analysis
+# Tests whether the Mandelbrot distribution f(r) = C/(r+q)^s fits LLM output token frequencies
+
+models:
+  - name: "gpt-5.1"
+    provider: "openai"
+    model_id: "gpt-5.1"
+    tokenizer: "gpt-5.1"
+    api_params:
+      temperature: 0.7
+      max_tokens: 16000  # 16K budget; GPT-5.1 is a reasoning model,
+                         # so tokens must cover hidden reasoning + visible output.
+                         # 1500 was too low and starved visible output.
+      logprobs: true
+      top_logprobs: 5
+
+  - name: "claude-sonnet-4-6"
+    provider: "anthropic"
+    model_id: "claude-sonnet-4-20250514"
+    tokenizer: "claude-sonnet-4-6"
+    api_params:
+      temperature: 0.7
+      max_tokens: 1500
+
+  - name: "llama-3.1-8b"
+    provider: "ollama"
+    model_id: "llama3.1:8b"
+    tokenizer: "llama-3.1"
+    api_params:
+      temperature: 0.7
+      max_tokens: 1500
+
+  - name: "gemini-2.5-pro"
+    provider: "google"
+    model_id: "gemini-2.5-pro"
+    tokenizer: "llama-3.1"   # analysis tokenizer is Llama BPE (apples-to-apples)
+    api_params:
+      temperature: 0.7
+      max_tokens: 8000       # reasoning model; hidden tokens share budget
+
+  - name: "mistral-large"
+    provider: "mistral"
+    model_id: "mistral-large-latest"
+    tokenizer: "llama-3.1"
+    api_params:
+      temperature: 0.7
+      max_tokens: 1500
+
+  - name: "qwen-2.5-7b"
+    provider: "ollama"
+    model_id: "qwen2.5:7b"
+    tokenizer: "llama-3.1"
+    api_params:
+      temperature: 0.7
+      max_tokens: 1500
+
+generation:
+  prompts_per_domain: 20
+  domains:
+    - news
+    - biomedical
+    - legal
+    - code
+    - social_media
+  total_prompts: 100  # 20 per domain x 5 domains
+  target_tokens_per_model: 100000  # ~100 prompts x ~1000 tokens each
+
+fitting:
+  methods:
+    - mle       # Maximum Likelihood Estimation
+    - ols       # Ordinary Least Squares on log-log
+  alternatives:
+    - zipf      # Pure Zipf (q=0)
+    - mandelbrot  # Full Mandelbrot (q>0)
+  model_selection: ["aic", "bic"]
+
+analysis:
+  rank_regions:
+    head: [1, 10]       # Function words, Section 9.5
+    body: [11, 50000]   # Content words, expected good fit
+    tail: [50001, null]  # Rare/domain terms, expected deviation
+
+  goodness_of_fit:
+    - r_squared          # On log-log scale
+    - ks_statistic       # Kolmogorov-Smirnov
+    - aic                # Akaike Information Criterion
+    - bic                # Bayesian Information Criterion
+
+  bootstrap:
+    n_iterations: 1000
+    confidence_level: 0.95
+
+output:
+  plots:
+    - rank_frequency_curves       # Log-log with theoretical overlay
+    - residual_by_region          # Head/body/tail residuals
+    - model_comparison            # Zipf vs Mandelbrot fit quality
+    - cross_model_comparison      # GPT vs Claude vs Llama
+    - cross_tokenizer_comparison  # BPE invariance test
+  tables:
+    - fit_parameters              # C, q, s per model
+    - goodness_of_fit_summary     # R², KS, AIC, BIC
+    - region_residuals            # Head/body/tail breakdown

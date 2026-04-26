@@ -1,0 +1,46 @@
+# Experiment 03: Confidence-Grounding Gap Signal Analysis
+# Tests whether delta(t) = P_LLM(t) - G_RI(t) discriminates hallucinated vs factual tokens
+#
+# This is the core test of the Ranking Inference mechanism (Section 5).
+# If the gap signal is higher for fabricated/hallucinated tokens than
+# factual tokens, the theoretical framework has predictive power.
+
+model:
+  name: "llama-3.1-8b"
+  model_id: "llama3.1:8b"
+  provider: "ollama"
+
+conditions:
+  # Condition 1: Factual generation (control)
+  # Prompts that elicit factual, verifiable text about well-known entities
+  factual:
+    n_prompts: 30
+    description: "Prompts about well-known entities/facts"
+
+  # Condition 2: Fabrication-inducing prompts
+  # Prompts designed to elicit fabricated entities, fake citations, invented details
+  hallucination:
+    n_prompts: 30
+    description: "Prompts designed to elicit fabricated content"
+
+  # Condition 3: Synthetic fabrication injection
+  # Take factual outputs and replace real entities with fabricated ones
+  # This gives us token-level ground truth labels
+  synthetic:
+    n_prompts: 20
+    description: "Factual text with injected fabricated entities"
+
+analysis:
+  # Per-token: compute delta(t) for every token
+  # Aggregate: compare distributions of delta(t) between conditions
+  # Token-level: for synthetic condition, compare delta at fabricated vs real entity tokens
+
+  metrics:
+    - mean_gap_by_condition      # Is mean delta higher for hallucinated?
+    - gap_distribution_separation  # KS test between conditions
+    - auroc_token_level          # Can gap discriminate fabricated tokens?
+    - effect_size                # Cohen's d between conditions
+
+  beta_values: [0.5, 1.0, 1.5, 2.0]  # Test sensitivity to beta
+
+reference_corpus: "wikipedia"  # Use cached Wikipedia rank table from Exp02

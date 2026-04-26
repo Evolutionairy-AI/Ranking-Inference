@@ -1,0 +1,114 @@
+======================================================================
+CONVICTION ANALYSIS SUMMARY
+======================================================================
+
+── FRANK Dataset (6,356 spans) ──
+
+Score: mean_delta_global
+  Optimal threshold: 0.8526
+  Signal inverted: False
+  Youden's J: 0.0936
+  Overall accuracy: 56.6%
+  ECE: 0.0771
+
+  Best bin: conviction [0.605, 0.691]
+    Accuracy: 100.0% on 1 samples (0.0% of data)
+
+  AUC-ROC at conviction thresholds:
+    conviction >= 0.01: AUC=0.510, acc=56.7%, n=5593 (88.0%)
+    conviction >= 0.03: AUC=0.502, acc=55.8%, n=4291 (67.5%)
+    conviction >= 0.05: AUC=0.485, acc=54.7%, n=3019 (47.5%)
+    conviction >= 0.10: AUC=0.472, acc=45.6%, n=992 (15.6%)
+    conviction >= 0.15: AUC=0.500, acc=47.0%, n=313 (4.9%)
+    conviction >= 0.20: AUC=0.503, acc=47.3%, n=110 (1.7%)
+    conviction >= 0.30: AUC=0.488, acc=46.2%, n=26 (0.4%)
+
+  Cost savings (triage performance):
+--------------------------------------------------
+Score: mean_delta_source
+  Optimal threshold: 0.8558
+  Signal inverted: False
+  Youden's J: 0.0920
+  Overall accuracy: 56.8%
+  ECE: 0.0727
+
+  Best bin: conviction [0.612, 0.700]
+    Accuracy: 100.0% on 1 samples (0.0% of data)
+
+  AUC-ROC at conviction thresholds:
+    conviction >= 0.01: AUC=0.509, acc=57.1%, n=5712 (89.9%)
+    conviction >= 0.03: AUC=0.495, acc=56.1%, n=4333 (68.2%)
+    conviction >= 0.05: AUC=0.476, acc=55.1%, n=3136 (49.3%)
+    conviction >= 0.10: AUC=0.474, acc=46.0%, n=1107 (17.4%)
+    conviction >= 0.15: AUC=0.520, acc=45.9%, n=342 (5.4%)
+    conviction >= 0.20: AUC=0.498, acc=47.5%, n=118 (1.9%)
+    conviction >= 0.30: AUC=0.476, acc=46.2%, n=26 (0.4%)
+
+  Cost savings (triage performance):
+--------------------------------------------------
+Score: mean_log_delta_global
+  Optimal threshold: 7.9304
+  Signal inverted: True
+  Youden's J: 0.1016
+  Overall accuracy: 57.0%
+  ECE: 0.0643
+
+  Best bin: conviction [10.318, 11.464]
+    Accuracy: 100.0% on 2 samples (0.0% of data)
+
+  AUC-ROC at conviction thresholds:
+    conviction >= 0.01: AUC=0.536, acc=57.0%, n=6287 (98.9%)
+    conviction >= 0.03: AUC=0.533, acc=57.0%, n=6126 (96.4%)
+    conviction >= 0.05: AUC=0.534, acc=57.1%, n=5998 (94.4%)
+    conviction >= 0.10: AUC=0.531, acc=57.3%, n=5652 (88.9%)
+    conviction >= 0.15: AUC=0.528, acc=57.5%, n=5373 (84.5%)
+    conviction >= 0.20: AUC=0.530, acc=57.5%, n=5061 (79.6%)
+    conviction >= 0.30: AUC=0.534, acc=57.3%, n=4432 (69.7%)
+
+  Cost savings (triage performance):
+--------------------------------------------------
+Score: mean_log_delta_source
+  Optimal threshold: 5.4336
+  Signal inverted: True
+  Youden's J: 0.1424
+  Overall accuracy: 57.4%
+  ECE: 0.0571
+
+  Best bin: conviction [4.426, 5.533]
+    Accuracy: 100.0% on 6 samples (0.1% of data)
+
+  AUC-ROC at conviction thresholds:
+    conviction >= 0.01: AUC=0.585, acc=57.4%, n=6242 (98.2%)
+    conviction >= 0.03: AUC=0.587, acc=57.6%, n=6022 (94.7%)
+    conviction >= 0.05: AUC=0.587, acc=58.0%, n=5803 (91.3%)
+    conviction >= 0.10: AUC=0.588, acc=58.5%, n=5278 (83.0%)
+    conviction >= 0.15: AUC=0.589, acc=58.4%, n=4771 (75.1%)
+    conviction >= 0.20: AUC=0.591, acc=58.6%, n=4277 (67.3%)
+    conviction >= 0.30: AUC=0.596, acc=58.6%, n=3268 (51.4%)
+
+  Cost savings (triage performance):
+--------------------------------------------------
+
+── Source vs Global Baseline ──
+  Correlation (linear): 0.9997
+  Correlation (log):    0.4944
+  Mean gap (errors):    0.0022
+  Mean gap (controls):  0.0021
+  Mean log gap (errors):   2.8523
+  Mean log gap (controls): 2.7818
+
+── Per Error Type (FRANK, mean_delta_global) ──
+  CircE (tier1.5, n=318): acc=71.8%, J=0.109
+  CorefE (tier2, n=266): acc=87.3%, J=0.099
+  EntE (tier1, n=974): acc=66.8%, J=0.140
+  LinkE (tier2, n=80): acc=78.6%, J=0.146
+  OutE (tier1, n=960): acc=72.1%, J=0.084
+  RelE (tier1.5, n=274): acc=71.0%, J=0.108
+
+── HaluEval ──
+  qa: acc=80.0%, J=0.500, ECE=0.3584
+  dialogue: acc=70.0%, J=0.500, ECE=0.3086
+  summarization: acc=60.0%, J=0.333, ECE=0.5176
+  all: acc=53.3%, J=0.167, ECE=0.1964
+
+======================================================================

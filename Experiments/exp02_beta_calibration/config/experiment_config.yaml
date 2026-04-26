@@ -1,0 +1,70 @@
+# Experiment 02: Beta Calibration Curves by Domain
+# Tests whether beta = 1/sigma^2_{Delta_r} varies systematically across domains
+# and matches the qualitative predictions in Section 6.3
+
+domains:
+  news:
+    corpus: "cc_news"
+    expected_sigma2: "moderate"
+    expected_beta_range: [0.7, 1.5]
+    description: "News articles — moderate distributional regularity"
+
+  biomedical:
+    corpus: "pubmed_qa"
+    expected_sigma2: "low"
+    expected_beta_range: [1.5, 3.0]
+    description: "Biomedical text — high regularity, standardized vocabulary"
+
+  legal:
+    corpus: "pile-of-law"
+    expected_sigma2: "low-moderate"
+    expected_beta_range: [1.5, 2.5]
+    description: "Legal text — predictable distributional patterns"
+
+  code:
+    corpus: "starcoderdata"
+    expected_sigma2: "variable"
+    expected_beta_range: [0.5, 2.0]
+    description: "Code — highly structured but domain-variable"
+
+  social_media:
+    corpus: "tweet_sentiment"
+    expected_sigma2: "high"
+    expected_beta_range: [0.3, 0.7]
+    description: "Social media — high deviation, informal register"
+
+reference_corpus:
+  name: "wikipedia"
+  dataset: "wikimedia/wikipedia"
+  subset: "20231101.en"
+  max_docs: 50000
+  description: "English Wikipedia as global reference baseline"
+
+analysis:
+  # Compute rank deviations: Delta_r = log2(r_global / r_local)
+  # sigma^2_{Delta_r} = Var(Delta_r) across all tokens in domain corpus
+  # beta = 1 / sigma^2_{Delta_r}
+
+  tokenizers: ["gpt-5.1", "claude-sonnet-4-6", "llama-3.1"]
+  min_tokens_per_domain: 500000
+
+  predictions:
+    # From Section 6.3 Table: expected ordering
+    beta_ordering: ["social_media", "code", "news", "legal", "biomedical"]
+    # social_media < code < news < legal < biomedical
+    # (low beta = high variance = more deviation expected)
+
+  statistical_tests:
+    - "kruskal_wallis"         # Non-parametric test: beta differs across domains
+    - "spearman_rank"          # Correlation: beta ordering matches prediction
+    - "bootstrap_ci"           # CIs on each domain's beta
+
+output:
+  plots:
+    - beta_by_domain           # Bar chart with CIs
+    - sigma2_by_domain         # Variance visualization
+    - rank_deviation_distributions  # Histograms per domain
+    - beta_vs_predicted        # Scatter: empirical beta vs theoretical range
+  tables:
+    - domain_beta_summary      # sigma^2, beta, CI for each domain
+    - cross_tokenizer_beta     # beta values across different tokenizers
