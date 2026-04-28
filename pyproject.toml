@@ -32,8 +32,8 @@ tokenizers = ["transformers>=4.40", "tokenizers>=0.19"]
 dev = ["pytest>=7.0", "ruff>=0.5"]
 
 [project.urls]
-Homepage = "https://github.com/Wallace-AI/Ranking-Inference"
-Repository = "https://github.com/Wallace-AI/Ranking-Inference"
+Homepage = "https://github.com/Evolutionairy-AI/Ranking-Inference"
+Repository = "https://github.com/Evolutionairy-AI/Ranking-Inference"
 Paper = "https://arxiv.org/abs/XXXX.XXXXX"
 
 [tool.setuptools]
