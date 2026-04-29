@@ -141,12 +141,14 @@ pytest tests/
 
 ```bibtex
 @article{bogdan2026universality,
-  title  = {The Surprising Universality of LLM Outputs:
-            A Real-Time Verification Primitive},
-  author = {Bogdan, Alex and de Valois-Franklin, Adrian},
-  year   = {2026},
-  note   = {arXiv preprint, forthcoming},
-}
+    title         = {The Surprising Universality of LLM Outputs:
+                     A Real-Time Verification Primitive},
+    author        = {Bogdan, Alex and de Valois-Franklin, Adrian},
+    year          = {2026},
+    eprint        = {2604.25634},
+    archivePrefix = {arXiv},
+    primaryClass  = {cs.CL},
+  }
 ```
 
 ## License
