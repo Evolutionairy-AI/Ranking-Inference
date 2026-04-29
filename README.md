@@ -1,7 +1,8 @@
 # Ranking Inference
 
-Distributional grounding primitives for large language model outputs, built on
-the **Mandelbrot Ranking Distribution** f(r) = C / (r + q)^s.
+  [![arXiv](https://img.shields.io/badge/arXiv-2604.25634-b31b1b.svg)](https://arxiv.org/abs/2604.25634)
+
+  Distributional grounding primitives for large language model outputs, built on
 
 This repository accompanies the paper
 
