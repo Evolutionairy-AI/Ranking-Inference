@@ -34,7 +34,7 @@ dev = ["pytest>=7.0", "ruff>=0.5"]
 [project.urls]
 Homepage = "https://github.com/Evolutionairy-AI/Ranking-Inference"
 Repository = "https://github.com/Evolutionairy-AI/Ranking-Inference"
-Paper = "https://arxiv.org/abs/XXXX.XXXXX"
+Paper = "https://arxiv.org/abs/2604.25634"
 
 [tool.setuptools]
 packages = ["ranking_inference"]
